@@ -12,11 +12,13 @@
 
 > **Nota:** O Windows por padrão oculta as extensões de arquivos. Para visualizar as extensões, vá para "Modo de Exibição" e desmarque a opção "Ocultar extensões para tipos de arquivo conhecidos".
 
+
 - Navegue até a pasta extraída e execute o arquivo `.exe` para iniciar a instalação.
 
 ## 4. Editar o Arquivo de Configurações `cntlm.ini`
 
 > **Nota:** O arquivo `cntlm.ini` é um arquivo de texto. Recomenda-se editá-lo usando o Notepad++ para facilitar a edição.
+
 
 - Abra o arquivo `cntlm.ini` localizado na pasta de instalação.
 - Exclua todo o conteúdo do arquivo e substitua pelo seguinte:
@@ -35,9 +37,11 @@
 ## 5. Coleta das Hashes NTLM
 
 - Para garantir a segurança do seu usuário, não é aconselhável usar senha em texto plano no Cntlm. Portanto, é necessário coletar as hashes NTLM usando o comando `cntlm -H`:
+  
 ```shell
 C:\Program Files\Cntlm>cntlm.exe -H
 ````
+
 - Insira sua senha quando solicitado e copie as linhas `PassLM`, `PassNT`, e `PassNTLMv2` geradas.
 
 ## 6. Atualizar o Arquivo `cntlm.ini`
@@ -48,22 +52,25 @@ C:\Program Files\Cntlm>cntlm.exe -H
 ## 7. Reiniciar o Serviço Cntlm
 
 - Para reiniciar o serviço Cntlm pelo terminal, use o seguinte comando:
+  
 ```shell
 C:\Program Files\Cntlm>cntlm.exe -r
 ```
+
 - Alternativamente, você pode reiniciar o serviço manualmente pelo serviços do sistema.
 ## 8. Configuração de Aplicativos para Usar o Cntlm
 
 - Configure todos os softwares que precisam utilizar o Cntlm com as seguintes configurações de proxy:
+  
 >  **IP:** `127.0.0.1`
 >  **Porta:** `3128`
+
 ## 9. Configurar Variáveis de Ambiente (Opcional)
 
 - Se o Cntlm não foi adicionado às variáveis de ambiente do sistema, você pode configurá-lo manualmente:
 - Abra "Painel de Controle" > "Sistema e Segurança" > "Sistema" > "Configurações avançadas do sistema" > "Variáveis de Ambiente".
 - Adicione `cntlm` ao `Path` para facilitar o gerenciamento do serviço via terminal:
-
-   
+ 
 ``` shell   
    cntlm -start 
    cntlm -stop   
@@ -83,6 +90,7 @@ Após configurar o Cntlm e reiniciar o serviço, você pode verificar se ele est
 
 - O comando `-t` verifica o status do servidor e deve retornar uma mensagem indicando que o Cntlm está ativo e escutando na porta configurada.
 ### 10.2. Usar o `netstat` para Verificar a Porta
+
 > **Nota:** O comando `netstat` pode não estar habilitado por padrão em algumas versões do Windows. Caso não funcione, você pode precisar habilitar a função "Netstat" ou usar uma ferramenta alternativa.
 
 - No terminal, execute o seguinte comando para verificar se a porta `3128` está sendo utilizada pelo Cntlm:
@@ -92,4 +100,28 @@ Após configurar o Cntlm e reiniciar o serviço, você pode verificar se ele est
 ```
 
 - Se o comando retornar uma linha com `0.0.0.0:3128` ou `127.0.0.1:3128`, isso indica que o Cntlm está escutando na porta correta.
+
+# **Extras**
+## 11. Configurar o `.npmrc` para Uso com Cntlm
+
+Se você estiver usando o Cntlm como proxy para gerenciar pacotes do npm, pode ser necessário configurar um arquivo `.npmrc` no seu perfil de usuário para garantir que o npm use o Cntlm corretamente.
+
+### 11.1. Criar ou Editar o Arquivo `.npmrc`
+
+1. **Localize o Arquivo `.npmrc`:**
+
+   O arquivo `.npmrc` pode estar localizado no diretório do usuário. Se não existir, você pode criá-lo.
+
+   - No Windows, o caminho é geralmente `C:\Users\<SeuUsuário>\.npmrc`.
+
+
+2. **Adicionar Configurações do Proxy:**
+
+   Abra o arquivo `.npmrc` com um editor de texto e adicione as seguintes linhas para configurar o proxy:
+
+```
+   proxy=http://127.0.0.1:3128
+   https-proxy=http://127.0.0.1:3128
+   ```
+
 
