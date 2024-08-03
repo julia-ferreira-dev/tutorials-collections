@@ -25,9 +25,9 @@
 
   ```ini
   ### Primeira e última linhas devem ser de comentário - não remova esta linha para evitar bug ###
-  Username <SEU LOGIN>
-  Domain <DOMÍNIO>
-  Proxy <SEU_PROXY>:3128
+  Username SEU_LOGIN
+  Domain SEU_DOMÍNIO
+  Proxy SEU_PROXY:3128
   # NoProxy localhost, 127.0.0.*, 10.*, 192.168.*, *.seudominio.com
   Listen 3128
   ### Fim do arquivo ###
