@@ -152,14 +152,15 @@ yarn add express
   
   **Referência Acadêmica**: Este conceito está relacionado à disciplina de Redes de Computadores, onde você aprende sobre comunicação entre cliente-servidor e protocolos como HTTP.
 - Assim como um sistema de controle de bibliotecas visto anteriomente, um servidor gerencia um conjunto de recursos (arquivos, bancos de dados, etc.) e atende às solicitações dos clientes. Quando um usuário faz uma solicitação a um servidor web, ele está, na verdade, "pedindo emprestado" um arquivo específico (uma página HTML, por exemplo) que está armazenado no servidor. O servidor "empresta" esse arquivo para o usuário, enviando-o através da rede.
-Em resumo:
+
+- Em resumo:
 Um servidor é um computador que oferece serviços a outros computadores (clientes) através de uma rede. Ele recebe solicitações, processa essas solicitações e retorna uma resposta. Essa interação é fundamental para a web, permitindo que você acesse sites, utilize aplicativos online e realize diversas outras atividades na internet.
 
 - Conceitos importantes relacionados a servidores:
-Protocolos de comunicação: São as regras que definem como os dados são trocados entre o cliente e o servidor. O protocolo HTTP (Hypertext Transfer Protocol) é o mais utilizado na web.
-Endereço IP: É um número único que identifica cada dispositivo conectado à internet, incluindo servidores.
-Domínio: É um nome fácil de lembrar associado a um endereço IP, como www.google.com.
-Porta: É um número que identifica um serviço específico em um servidor. Por exemplo, o serviço HTTP geralmente utiliza a porta 80.
+   - Protocolos de comunicação: São as regras que definem como os dados são trocados entre o cliente e o servidor. O protocolo HTTP (Hypertext Transfer Protocol) é o mais utilizado na web.
+   - Endereço IP: É um número único que identifica cada dispositivo conectado à internet, incluindo servidores.
+   - Domínio: É um nome fácil de lembrar associado a um endereço IP, como www.google.com.
+   - Porta: É um número que identifica um serviço específico em um servidor. Por exemplo, o serviço HTTP geralmente utiliza a porta 80.
    
 ---
 
