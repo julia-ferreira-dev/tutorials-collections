@@ -88,7 +88,7 @@ O Yarn funciona de forma semelhante ao npm, mas com algumas vantagens em relaç�
   - Controle mais detalhado das dependências.
   
 **Referência Acadêmica**: Ambos os gerenciadores de pacotes podem ser comparados a sistemas de controle de bibliotecas que você já deve ter estudado na disciplina de Engenharia de Software.
-Em **Engenharia de Software**, um sistema de controle de bibliotecas é um exemplo de aplicação projetada para gerenciar e automatizar as operações de uma biblioteca física ou digital. Ele facilita o controle sobre o acervo de livros, revistas, periódicos e outros materiais, além de gerenciar o empréstimo, a devolução e o cadastro de usuários. De forma semelhante, o **npm** (Node Package Manager) funciona como um sistema de controle de bibliotecas, mas no contexto de desenvolvimento de software. O npm gerencia e automatiza o controle de pacotes (bibliotecas de código), facilitando a instalação, atualização e remoção dessas dependências em projetos de **Node.js**. Assim como o sistema de controle de bibliotecas organiza e gerencia o acervo e suas transações, o npm organiza e mantém as dependências de um projeto, garantindo que as bibliotecas estejam sempre disponíveis e atualizadas.
+- Em **Engenharia de Software**, um sistema de controle de bibliotecas é um exemplo de aplicação projetada para gerenciar e automatizar as operações de uma biblioteca física ou digital. Ele facilita o controle sobre o acervo de livros, revistas, periódicos e outros materiais, além de gerenciar o empréstimo, a devolução e o cadastro de usuários. De forma semelhante, o **npm** (Node Package Manager) funciona como um sistema de controle de bibliotecas, mas no contexto de desenvolvimento de software. O npm gerencia e automatiza o controle de pacotes (bibliotecas de código), facilitando a instalação, atualização e remoção dessas dependências em projetos de **Node.js**. Assim como o sistema de controle de bibliotecas organiza e gerencia o acervo e suas transações, o npm organiza e mantém as dependências de um projeto, garantindo que as bibliotecas estejam sempre disponíveis e atualizadas.
 
 Portanto, o **npm** age como uma "biblioteca digital" de pacotes, permitindo que desenvolvedores baixem, atualizem e compartilhem código de forma eficiente, semelhante ao modo como uma biblioteca tradicional gerencia seu acervo de materiais.
 
@@ -151,7 +151,15 @@ yarn add express
 - Um servidor é uma aplicação que escuta por requisições de clientes (navegadores, por exemplo) e responde a essas requisições com dados ou serviços.
   
   **Referência Acadêmica**: Este conceito está relacionado à disciplina de Redes de Computadores, onde você aprende sobre comunicação entre cliente-servidor e protocolos como HTTP.
-  Explique usando uma didática semelhante a **Referência Acadêmica** anterior.
+- Assim como um sistema de controle de bibliotecas visto anteriomente, um servidor gerencia um conjunto de recursos (arquivos, bancos de dados, etc.) e atende às solicitações dos clientes. Quando um usuário faz uma solicitação a um servidor web, ele está, na verdade, "pedindo emprestado" um arquivo específico (uma página HTML, por exemplo) que está armazenado no servidor. O servidor "empresta" esse arquivo para o usuário, enviando-o através da rede.
+Em resumo:
+Um servidor é um computador que oferece serviços a outros computadores (clientes) através de uma rede. Ele recebe solicitações, processa essas solicitações e retorna uma resposta. Essa interação é fundamental para a web, permitindo que você acesse sites, utilize aplicativos online e realize diversas outras atividades na internet.
+
+- Conceitos importantes relacionados a servidores:
+Protocolos de comunicação: São as regras que definem como os dados são trocados entre o cliente e o servidor. O protocolo HTTP (Hypertext Transfer Protocol) é o mais utilizado na web.
+Endereço IP: É um número único que identifica cada dispositivo conectado à internet, incluindo servidores.
+Domínio: É um nome fácil de lembrar associado a um endereço IP, como www.google.com.
+Porta: É um número que identifica um serviço específico em um servidor. Por exemplo, o serviço HTTP geralmente utiliza a porta 80.
    
 ---
 
